@@ -119,7 +119,8 @@
 
 				// global ambient audio
 
-				var sound4 = new THREE.Audio( listener );
+				var sound4_o = new THREE.Audio( listener );
+				var sound4 = sound4_o.clone()
 				audioLoader.load( 'sounds/Project_Utopia.ogg', function ( buffer ) {
 
 					sound4.setBuffer( buffer );
